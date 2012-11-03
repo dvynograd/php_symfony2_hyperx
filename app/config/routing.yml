@@ -1,0 +1,14 @@
+kingston_hyperx:
+    resource: "@KingstonHyperxBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+acme_store:
+    resource: "@AcmeStoreBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+# Internal routing configuration to handle ESI
+#_internal:
+#    resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
+#    prefix:   /_internal
