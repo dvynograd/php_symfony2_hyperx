@@ -1,0 +1,48 @@
+/* print stylesheet */
+html, body, .g-body{
+background: #fff;
+}
+
+
+
+.center_part,
+.content{
+width: auto;
+background: none;
+}
+
+.banner-730,
+.header,
+.drop_menu,
+.right_part,
+.devide ,
+.read_block,
+.line2,
+.footer,
+#comments {
+display: none;
+}
+
+
+.content{
+padding: 0;
+}
+
+.b-print-link{
+float: left;
+padding-right: 30px;
+}
+
+.copy{
+float: left;
+width: auto;
+}
+
+.news_photo_panel{
+background: none;
+border: 0px none;
+}
+
+.b-social-likes{
+display: none;
+}
