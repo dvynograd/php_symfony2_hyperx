@@ -6,7 +6,7 @@ use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use Kingston\HyperxBundle\Entity\Review;
 
-class LoadUserData extends AbstractFixture implements OrderedFixtureInterface
+class LoadReviewData extends AbstractFixture implements OrderedFixtureInterface
 {
     /**
      * {@inheritDoc}
