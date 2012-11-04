@@ -316,6 +316,7 @@ a.sub-cat, a.sub-cat:hover{ text-decoration: none}
 #news-full h3  { float: right; margin-right: 9px; margin-top: 6px; margin-bottom: 56px; text-transform: uppercase; font-size: 14px; font-style: italic; color: #fff;}
 #news-full a#news-cont-title { float: right; margin-right: 9px; margin-top: 6px; margin-bottom: 56px; text-transform: uppercase; font-size: 14px; font-style: italic; color: #fff; text-decoration: none; font-weight: bold;}
 .b-actions-full h3 {margin-right: 15px !important; color: #fff !important}
+.b-actions-full a {margin-right: 15px !important; color: #fff !important}
 #news-full .news-inn {width: 587px; margin: 0 15px 0 -30px}
 #news-full-cont{ position: relative; min-height: 337px}
 #news-full-cont .item {width: auto}
