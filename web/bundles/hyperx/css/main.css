@@ -189,6 +189,8 @@ div.b-lightbox-outer .content{ position: relative; padding-left: 28px; height: 1
 .b-news{ display: block; position: absolute; bottom: 0px; right: 109px; width: 420px; height: 305px; padding-left: 81px; padding-top: 12px; background: url(../images/bg_news_new_transp.png) left top no-repeat}
 .b-news h3{ float: left; margin-bottom: 9px; margin-right: 36px; text-transform: uppercase; font-size: 14px; font-style: italic}
 .b-news-list .item{ display: block; width: 390px; margin: 0; padding: 6px 8px; font-size: 12px; border-bottom: 1px solid #000}
+.actions-list .item{ width: auto;}
+.actions-list .jScrollPaneContainer { height: 595px; width: 587px;}
 .b-news-list .item small{ display: block; margin: 0 0 3px; font-family: Arial; font-size: 10px; color: #000}
 .b-news-list .item a{ display: block; text-decoration: none; font-family: 'Play', sans-serif; font-size: 14px; line-height: 15px; color: #fff}
 .b-news-list .item img{ float: right; width: 64px; margin-left: 25px}
@@ -311,7 +313,8 @@ a.sub-cat, a.sub-cat:hover{ text-decoration: none}
 .g-footer ul li a:hover{ color: #E11D39}
 #news-full{ position: absolute; z-index: 600; width: 572px; height: 2000px; bottom: -1295px; right: 109px; background: url(../images/bg_news_full_transp.png) left top no-repeat; padding-left: 30px; padding-top: 0px}
 .b-actions-full {background: url(../images/bg_actions_full_transp.png) left top no-repeat !important}
-#news-full h3{ float: right; margin-right: 9px; margin-top: 6px; margin-bottom: 56px; text-transform: uppercase; font-size: 14px; font-style: italic; color: #fff}
+#news-full h3  { float: right; margin-right: 9px; margin-top: 6px; margin-bottom: 56px; text-transform: uppercase; font-size: 14px; font-style: italic; color: #fff;}
+#news-full a#news-cont-title { float: right; margin-right: 9px; margin-top: 6px; margin-bottom: 56px; text-transform: uppercase; font-size: 14px; font-style: italic; color: #fff; text-decoration: none; font-weight: bold;}
 .b-actions-full h3 {margin-right: 15px !important; color: #fff !important}
 #news-full .news-inn {width: 587px; margin: 0 15px 0 -30px}
 #news-full-cont{ position: relative; min-height: 337px}
