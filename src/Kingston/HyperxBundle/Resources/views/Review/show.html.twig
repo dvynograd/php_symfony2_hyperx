@@ -1,9 +1,7 @@
 {% extends "KingstonHyperxBundle::layout.html.twig" %}
 {% block content %}
-<div class="g-container">
-    <div class="inner">
         <div id="news-full">
-            <h3 id="news-cont-title" data-href="/reviews/">Обзоры</h3>
+            <a href="{{ path('review') }}" id="news-cont-title" data-href="/reviews/">Обзоры</a>
             <del class="clr"></del>
             <div class="news-inn">
 		<div id="news-full-cont" >
@@ -16,13 +14,11 @@
                         <del class="clr"></del>
                         <ul class="news-menu">
                             <li><a class="prev" data-id="37" href="/reviews/id/obzor-i-testirovanie-proizvoditelnyh-tverdotelnyh-nakopitelej-kingston-hyperh-i-kc100-obemom-120-gb-037/">предыдущий</a></li>		
-                            <li class="c"><a href="/reviews/">все обзоры</a></li>
+                            <li class="c"><a href="{{ path('review') }}">все обзоры</a></li>
                             <li><a class="next" data-id="39" href="/reviews/id/kingston-hyperx-3k-pravda-i-zabluzhdenija-o-dolgovechnosti-ssd-039/">следующий</a></li>	
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
 {% endblock %}

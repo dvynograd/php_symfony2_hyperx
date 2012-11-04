@@ -1,49 +1,24 @@
-<h1>News</h1>
-
-<table class="record_properties">
-    <tbody>
-        <tr>
-            <th>Id</th>
-            <td>{{ entity.id }}</td>
-        </tr>
-        <tr>
-            <th>Title</th>
-            <td>{{ entity.title }}</td>
-        </tr>
-        <tr>
-            <th>Description</th>
-            <td>{{ entity.description }}</td>
-        </tr>
-        <tr>
-            <th>Content</th>
-            <td>{{ entity.content }}</td>
-        </tr>
-        <tr>
-            <th>Date</th>
-            <td>{{ entity.date|date('Y-m-d H:i:s') }}</td>
-        </tr>
-        <tr>
-            <th>Is_active</th>
-            <td>{{ entity.isactive }}</td>
-        </tr>
-    </tbody>
-</table>
-
-<ul class="record_actions">
-    <li>
-        <a href="{{ path('news') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>
-        <a href="{{ path('news_edit', { 'id': entity.id }) }}">
-            Edit
-        </a>
-    </li>
-    <li>
-        <form action="{{ path('news_delete', { 'id': entity.id }) }}" method="post">
-            {{ form_widget(delete_form) }}
-            <button type="submit">Delete</button>
-        </form>
-    </li>
-</ul>
+{% extends "KingstonHyperxBundle::layout.html.twig" %}
+{% block content %}
+        <div id="news-full">
+            <a href="{{ path('news') }}" id="news-cont-title" data-href="/news/">Новости</a>
+            <del class="clr"></del>
+            <div class="news-inn">
+		<div id="news-full-cont" >
+                    <div class="b-news-full">
+                        <h1>{{ entity.title }}</h1>
+                        <small class="date">{{ entity.date|date('Y/m/d') }}</small>
+                        <div class="b-content b-news-content">
+                            {{ entity.content }}
+                        </div>
+                        <del class="clr"></del>
+                        <ul class="news-menu">
+                            <li><a class="prev" data-id="37" href="/reviews/id/obzor-i-testirovanie-proizvoditelnyh-tverdotelnyh-nakopitelej-kingston-hyperh-i-kc100-obemom-120-gb-037/">предыдущая</a></li>		
+                            <li class="c"><a href="{{ path('news') }}">все новости</a></li>
+                            <li><a class="next" data-id="39" href="/reviews/id/kingston-hyperx-3k-pravda-i-zabluzhdenija-o-dolgovechnosti-ssd-039/">следующая</a></li>	
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}

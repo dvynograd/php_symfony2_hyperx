@@ -88,17 +88,17 @@
         </div>
         <div class="z2" id="cont-menu">
             <ul class="b-menu">
-                <li><a id="btn-goods" href="goods.html">Продукты</a></li>
-                <li><a id="btn-news" href="news.html">Новости</a></li>
-                <li><a id="btn-reviews" href="reviews.html">Обзоры</a></li>
-                <li><a id="btn-actions" href="actions.html">Акции</a></li>
+                <li><a id="btn-goods" href="{{ path('productcategory') }}">Продукты</a></li>
+                <li><a id="btn-news" href="{{ path('news') }}">Новости</a></li>
+                <li><a id="btn-reviews" href="{{ path('review') }}">Обзоры</a></li>
+                <li><a id="btn-actions" href="{{ path('action') }}">Акции</a></li>
             </ul>
             <a class="b-href-xtreme" target="_blank" href="http://xtremelabs.org/"></a>
             <a class="b-href-navi" target="_blank" href="http://navi-gaming.com/"></a>
         </div>
         <div class="z3" id="cont-logo">
             <div class="logo">
-                <a href="index.html" class="mainlogo"><strong>Kingston Hyper-X</strong></a>
+                <a href="{{ path('productcategory') }}" class="mainlogo"><strong>Kingston Hyper-X</strong></a>
                 <span><a href="#">SPEEDTEST</a></span>
             </div>
 
@@ -107,9 +107,12 @@
 </div>
 
 <!-- END CLIP -->
-
+<div class="g-container">
+    <div class="inner">
 {% block content %}
 {% endblock %}
+    </div>
+</div>
 
 <!-- CLIP -->
 

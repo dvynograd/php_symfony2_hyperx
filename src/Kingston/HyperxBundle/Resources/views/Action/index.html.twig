@@ -1,45 +1,21 @@
-<h1>Action list</h1>
-
-<table class="records_list">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Content</th>
-            <th>Date</th>
-            <th>Is_active</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-    {% for entity in entities %}
-        <tr>
-            <td><a href="{{ path('action_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-            <td>{{ entity.title }}</td>
-            <td>{{ entity.description }}</td>
-            <td>{{ entity.content }}</td>
-            <td>{% if entity.date %}{{ entity.date|date('Y-m-d H:i:s') }}{% endif %}</td>
-            <td>{{ entity.isactive }}</td>
-            <td>
-                <ul>
-                    <li>
-                        <a href="{{ path('action_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('action_edit', { 'id': entity.id }) }}">edit</a>
-                    </li>
-                </ul>
-            </td>
-        </tr>
-    {% endfor %}
-    </tbody>
-</table>
-
-<ul>
-    <li>
-        <a href="{{ path('action_new') }}">
-            Create a new entry
-        </a>
-    </li>
-</ul>
+{% extends "KingstonHyperxBundle::layout.html.twig" %}
+{% block content %}
+<div class="b-actions-full actions-list" id="news-full">
+    <h3 data-href="/news/" id="news-cont-title">Акции</h3>
+    <del class="clr"></del>
+    <div class="news-inn">
+        <div tabindex="0" class="jScrollPaneContainer">
+            <div class="b-news-list b-news-list-inner b-actions-list">
+            {% for entity in entities %}
+            <div class="item">
+                <sup></sup>
+                <a data-id="7" href="{{ path('action_show', { 'id': entity.id }) }}"><img src="http://hyperx.com.ua/files/news_tape/images/0/7/s-8-po-30-oktjabrja_7_s3.png" alt="С 8 по 30 октября!">{{ entity.title }}</a>
+                <p>{{ entity.description }}</p>
+                <del class="clr"></del>
+            </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
