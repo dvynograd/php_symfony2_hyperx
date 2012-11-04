@@ -5,9 +5,9 @@
                 <div class="goods-cats">
                     <ul class="top-menu">
                         {% for entity in entities %}
-                        <li class="m1" data-cat-id="1" data-owner-id="0" id="cat-button-1"><span>{{ entity.shortName }}</span></li>
+                        <li class="m1" data-cat-id="1" data-owner-id="0" id="cat-button-1"><a href="{{ path('productcategory_show', { 'id': entity.id }) }}"><span>{{ entity.shortName }}</span></a></li>
                         {% endfor%}
-                        <li class="m0 active" data-cat-id="0" data-owner-id="0" id="cat-button-0"><span>Продукты</span></li>
+                        <li class="m0 active" data-cat-id="0" data-owner-id="0" id="cat-button-0"><a href="{{ path('productcategory') }}"><span>Продукты</span></a></li>
                     </ul>
                     <del class="clr"></del>
                     <div class="goods-descr">

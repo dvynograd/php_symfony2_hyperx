@@ -1,5 +1,41 @@
 {% extends "KingstonHyperxBundle::layout.html.twig" %}
 {% block content %}
+        <div id="cont-goods" class="g-goods">
+            <div class="b-goods-inner">
+		<div class="goods-cats">
+                    <ul class="top-menu"
+                        <li class="m1 active" data-cat-id="1" data-owner-id="0" id="cat-button-1"><span>Память</span></li>
+                        <li class="m2" data-cat-id="2" data-owner-id="0" id="cat-button-2"><span>SSD</span></li>			
+                        <li class="m0" data-cat-id="0" data-owner-id="0" id="cat-button-0"><span>Продукты</span></li>
+                    </ul>
+                    <del class="clr"></del>
+                    <div class="goods-descr">
+                            <div id="goods-descr-cont"></div>
+                    </div>
+                    <div class="total-cats" id="total-cats" style="display: block;">
+                        <div class="cats-cont" id="cats-0" style="display: none;">
+                            <ul class="cats">
+                                <li class="c11">
+                                    <a data-cat-id="1" data-owner-id="0" href="#"><img alt="Модули памяти Kingston HyperX" src="http://hyperx.com.ua/files/catalog_cat/images/0/1/moduli-pamjati-kingston-hyperx_1_p0.png"></a>
+                                    <a class="title" data-cat-id="1" data-owner-id="0" href="#">Модули памяти Kingston <span>HyperX</span></a>
+                                    <del class="clr"></del>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" id="btn-go-back" style="display: block;"></a>
+            <div class="b-check-original" style="display: block;">
+                    <a href="http://www.kingston.com/ru/memory/hyperx/decoder/" target="_blank" class="ajx-std">Проверить оригинальность продукции &gt;&gt;</a>
+                    <span>Проверка за одну минуту</span>
+            </div>
+        </div>
+
+
+
+
+
 <h1>ProductCategory</h1>
 
 <table class="record_properties">
@@ -23,24 +59,7 @@
     </tbody>
 </table>
 
-<ul class="record_actions">
-    <li>
-        <a href="{{ path('productcategory') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>
-        <a href="{{ path('productcategory_edit', { 'id': entity.id }) }}">
-            Edit
-        </a>
-    </li>
-    <li>
-        <form action="{{ path('productcategory_delete', { 'id': entity.id }) }}" method="post">
-            {{ form_widget(delete_form) }}
-            <button type="submit">Delete</button>
-        </form>
-    </li>
-</ul>
+
 
 
 <table class="records_list">
