@@ -2,31 +2,31 @@
 {% block content %}
 <div class="g-container">
     <div class="inner">
-<div class="b-reviews" id="cont-reviews">
-    <h3>Обзоры</h3>
+        <div class="b-reviews" id="cont-reviews">
+            <h3>Обзоры</h3>
 
-    <div id="reviews-slider">
-        <ul>
-            {% for entity in entities %}
-                <li>
-                    <div class="item">
-                        <a href="{{ path('review_show', { 'id': entity.id }) }}" class="img" data-id="38" target="_blank"><img src="{{ asset('bundles/hyperx/images/bg_review_img.png') }}" alt="{{ entity.description }}" style="background-image: url(http://hyperx.com.ua/files/news_tape/images/0/38/pamjat-kingston-hyperx-predato_38_s2.png)"/></a>
-                        <p>
-                            <a data-id="38" href="{{ path('review_show', { 'id': entity.id }) }}">{{ entity.content }}</a>
-                            <span><a data-id="38" href="{{ path('review_show', { 'id': entity.id }) }}">{{ entity.description }}</a></span>
-                        </p>
-                    </div>
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
-    <div class="pager" id="reviews-pager">
-        <span class="active"></span>
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-</div>
+            <div id="reviews-slider">
+                <ul>
+                    {% for entity in entities %}
+                        <li>
+                            <div class="item">
+                                <a href="{{ path('review_show', { 'id': entity.id }) }}" class="img" data-id="38" target="_blank"><img src="{{ asset('bundles/hyperx/images/bg_review_img.png') }}" alt="{{ entity.description }}" style="background-image: url(http://hyperx.com.ua/files/news_tape/images/0/38/pamjat-kingston-hyperx-predato_38_s2.png)"/></a>
+                                <p>
+                                    <a data-id="38" href="{{ path('review_show', { 'id': entity.id }) }}">{{ entity.content|slice(0,150) }}...</a>
+                                    <span><a data-id="38" href="{{ path('review_show', { 'id': entity.id }) }}">{{ entity.title }}</a></span>
+                                </p>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="pager" id="reviews-pager">
+                <span class="active"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
 
 
 <div id="news-full">
@@ -37,36 +37,12 @@
             <div class="b-news-list b-news-list-inner b-reviews-list">
                 {% for entity in entities %}
                     <div class="item">
-                        <small>{% if entity.date %}{{ entity.date|date('d-m-Y') }}{% endif %}</small>
-                        <a href="{{ path('review_show', { 'id': entity.id }) }}" data-id="38"><img alt="{{ entity.description }}" src="http://hyperx.com.ua/files/news_tape/images/0/38/pamjat-kingston-hyperx-predato_38_s100.png">{{ entity.description }}</a>
-                        <p>{{ entity.content }}</p>
+                        <small>{% if entity.date %}{{ entity.date|date('d/m/Y') }}{% endif %}</small>
+                        <a href="{{ path('review_show', { 'id': entity.id }) }}" data-id="{{ entity.id }}"><img alt="{{ entity.title }}" src="http://hyperx.com.ua/files/news_tape/images/0/38/pamjat-kingston-hyperx-predato_38_s100.png">{{ entity.title }}</a>
+                        <p>{{ entity.description }}</p>
                         <del class="clr"></del>
                     </div>
                 {% endfor %}
-                <!--div class="item">
-                            <small>14/09/12</small>
-                <a href="/reviews/id/pamjat-kingston-hyperx-predator-ddr3-dlja-samyh-trebovatelnyh-038/" data-id="38"><img alt="Память Kingston HyperX Predator DDR3 для самых требовательных" src="http://hyperx.com.ua/files/news_tape/images/0/38/pamjat-kingston-hyperx-predato_38_s100.png">Память Kingston HyperX Predator DDR3 для самых требовательных</a>
-                <p>Компания Kingston Technology анонсировала 240-контактные модули DIMM оперативной памяти DDR3 из новой линейки HyperX Predator Series, ориентированные...</p>
-                <del class="clr"></del>
-                </div>
-                <div class="item">
-                            <small>05/09/12</small>
-                <a href="/reviews/id/kingston-hyperx-3k-pravda-i-zabluzhdenija-o-dolgovechnosti-ssd-039/" data-id="39"><img alt="Kingston HyperX 3K: правда и заблуждения о долговечности SSD" src="http://hyperx.com.ua/files/news_tape/images/0/39/kingston-hyperx-3k-pravda-i-za_39_s100.png">Kingston HyperX 3K: правда и заблуждения о долговечности SSD</a>
-                <p>У Flash-памяти есть одно общеизвестное неприятное свойство: процесс записи данных в ячейку физически повреждает ее, поэтому количество циклов...</p>
-                <del class="clr"></del>
-            </div>
-                <div class="item">
-                            <small>15/05/12</small>
-                <a href="/reviews/id/obzor-i-testirovanie-proizvoditelnyh-tverdotelnyh-nakopitelej-kingston-hyperh-i-kc100-obemom-120-gb-037/" data-id="37"><img alt="Обзор и тестирование производительных твердотельных накопителей Kingston HyperХ и KC100 объемом 120 GB" src="http://hyperx.com.ua/files/news_tape/images/0/37/kingston-vypuskaet-nedorogie-u_37_s100.png">Обзор и тестирование производительных твердотельных накопителей Kingston HyperХ и KC100 объемом 120 GB</a>
-                <p>Не так давно мы познакомились с твердотельным накопителем Kingston SSDNow V+200 объемом 120 GB. В целом, этот продукт оставил положительные...</p>
-                <del class="clr"></del>
-            </div>
-                <div class="item">
-                            <small>09/08/10</small>
-                <a href="/reviews/id/obzor-ssd-diska-kingston-ssdnow-v-series-snvp325-s2128gb-006/" data-id="6"><img alt="Обзор SSD-диска Kingston SSDNow V+-Series SNVP325-S2/128GB" src="http://hyperx.com.ua/files/news_tape/images/0/6/hyperx-predator-debuts_6_s100.png">Обзор SSD-диска Kingston SSDNow V+-Series SNVP325-S2/128GB</a>
-                <p>Предоставив на суд нашему читателю уже три обзора SSD-дисков от компаний Intel и Kingston, мы не однократно отмечали их преимущества и недостатки над...</p>
-                <del class="clr"></del>
-            </div-->
         </div>
         </div>
     </div>
