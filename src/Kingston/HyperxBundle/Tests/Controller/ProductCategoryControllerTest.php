@@ -1,10 +1,10 @@
 <?php
 
-namespace Acme\StoreBundle\Tests\Controller;
+namespace Kingston\HyperxBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class ProductControllerTest extends WebTestCase
+class ProductCategoryControllerTest extends WebTestCase
 {
     /*
     public function testCompleteScenario()
@@ -13,13 +13,13 @@ class ProductControllerTest extends WebTestCase
         $client = static::createClient();
 
         // Create a new entry in the database
-        $crawler = $client->request('GET', '/product/');
+        $crawler = $client->request('GET', '/productcategory/');
         $this->assertTrue(200 === $client->getResponse()->getStatusCode());
         $crawler = $client->click($crawler->selectLink('Create a new entry')->link());
 
         // Fill in the form and submit it
         $form = $crawler->selectButton('Create')->form(array(
-            'product[field_name]'  => 'Test',
+            'kingston_hyperxbundle_productcategorytype[field_name]'  => 'Test',
             // ... other fields to fill
         ));
 
@@ -33,7 +33,7 @@ class ProductControllerTest extends WebTestCase
         $crawler = $client->click($crawler->selectLink('Edit')->link());
 
         $form = $crawler->selectButton('Edit')->form(array(
-            'product[field_name]'  => 'Foo',
+            'kingston_hyperxbundle_productcategorytype[field_name]'  => 'Foo',
             // ... other fields to fill
         ));
 
@@ -50,5 +50,6 @@ class ProductControllerTest extends WebTestCase
         // Check the entity has been delete on the list
         $this->assertNotRegExp('/Foo/', $client->getResponse()->getContent());
     }
+
     */
 }

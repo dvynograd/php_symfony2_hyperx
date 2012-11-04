@@ -14,10 +14,10 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface
     public function load(ObjectManager $manager)
     {
         for ($i = 0; $i <10; $i++) {
-            $review = new News();
-            $review->setDate(new \DateTime());
-            $review->setTitle('Турнир по StarCraft II от Kingston с призовым фондом $15 тысяч');
-            $review->setContent('Компания Kingston Technology организовывает международный онлайн-турнир по'
+            $news = new News();
+            $news->setDate(new \DateTime());
+            $news->setTitle('Турнир по StarCraft II от Kingston с призовым фондом $15 тысяч');
+            $news->setContent('Компания Kingston Technology организовывает международный онлайн-турнир по'
                 . ' StarCraft II в честь десятой годовщины существования линейки игровых продуктов под маркой HyperX,'
                 . ' которые пользуются неизменной популярностью игроков и компьютерных энтузиастов.'
                 . ' Открытая для всех регистрация на участие в соревновании уже началась, а завершится 27 сентября.'
@@ -34,10 +34,10 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface
                 . ' игроками и выиграть классные призы".'
                 . ' Условия участия в соревновании и дополнительная информация о правилах, организационной структуре,'
                 . ' картах и призах представлена на сайте мероприятия .источник: www.3dnews.ru');
-            $review->setDescription('Компания Kingston Technology организовывает международный онлайн-турнир по '
+            $news->setDescription('Компания Kingston Technology организовывает международный онлайн-турнир по '
                 . 'StarCraft II в честь десятой годовщины HyperX...');
-            $review->setIsActive(true);
-            $manager->persist($review);
+            $news->setIsActive(true);
+            $manager->persist($news);
         }
         $manager->flush();
     }

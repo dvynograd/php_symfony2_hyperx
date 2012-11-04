@@ -14,10 +14,10 @@ class LoadActionData extends AbstractFixture implements OrderedFixtureInterface
     public function load(ObjectManager $manager)
     {
         for ($i = 0; $i <10; $i++) {
-            $review = new Action();
-            $review->setDate(new \DateTime());
-            $review->setTitle('С 8 по 30 октября!');
-            $review->setContent('Акция! Получи гипер-скидку к десятилетию Kingston HyperX! Фантастические скидки на всю'
+            $action = new Action();
+            $action->setDate(new \DateTime());
+            $action->setTitle('С 8 по 30 октября!');
+            $action->setContent('Акция! Получи гипер-скидку к десятилетию Kingston HyperX! Фантастические скидки на всю'
                 . ' линейку HyperX. Гипер-пространство, ультра-звук — все это детский смех по сравнению со сверх-быстрой'
                 . ' оперативной памятью и SSD накопителями HyperX!'
                 . ' Скорее! Пока не поздно! Получи свою супер-скидку на ультра-скоростную память HyperX!'
@@ -26,9 +26,9 @@ class LoadActionData extends AbstractFixture implements OrderedFixtureInterface
                 . ' продукции HyperX, получай скидку до 70%!'
                 . ' Быстрее скорости света?! Только с HyperX!'
             );
-            $review->setDescription('Невероятные скидки к десятилетию HyperX!');
-            $review->setIsActive(true);
-            $manager->persist($review);
+            $action->setDescription('Невероятные скидки к десятилетию HyperX!');
+            $action->setIsActive(true);
+            $manager->persist($action);
         }
         $manager->flush();
     }

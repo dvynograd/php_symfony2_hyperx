@@ -1,6 +1,6 @@
-<h1>Product creation</h1>
+<h1>ProductCategory creation</h1>
 
-<form action="{{ path('product_create') }}" method="post" {{ form_enctype(form) }}>
+<form action="{{ path('productcategory_create') }}" method="post" {{ form_enctype(form) }}>
     {{ form_widget(form) }}
     <p>
         <button type="submit">Create</button>
@@ -9,7 +9,7 @@
 
 <ul class="record_actions">
     <li>
-        <a href="{{ path('product') }}">
+        <a href="{{ path('productcategory') }}">
             Back to the list
         </a>
     </li>

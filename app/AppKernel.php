@@ -19,7 +19,6 @@ class AppKernel extends Kernel
             new JMS\AopBundle\JMSAopBundle(),
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
-            new Acme\StoreBundle\AcmeStoreBundle(),
             new Kingston\HyperxBundle\KingstonHyperxBundle(),
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
             new Admingenerator\GeneratorBundle\AdmingeneratorGeneratorBundle(),

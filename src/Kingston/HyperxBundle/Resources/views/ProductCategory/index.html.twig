@@ -1,29 +1,29 @@
-<h1>Product list</h1>
+<h1>ProductCategory list</h1>
 
 <table class="records_list">
     <thead>
         <tr>
             <th>Id</th>
             <th>Name</th>
-            <th>Price</th>
-            <th>Description</th>
+            <th>Shortname</th>
+            <th>Url</th>
             <th>Actions</th>
         </tr>
     </thead>
     <tbody>
     {% for entity in entities %}
         <tr>
-            <td><a href="{{ path('product_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+            <td><a href="{{ path('productcategory_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
             <td>{{ entity.name }}</td>
-            <td>{{ entity.price }}</td>
-            <td>{{ entity.description }}</td>
+            <td>{{ entity.shortName }}</td>
+            <td>{{ entity.url }}</td>
             <td>
                 <ul>
                     <li>
-                        <a href="{{ path('product_show', { 'id': entity.id }) }}">show</a>
+                        <a href="{{ path('productcategory_show', { 'id': entity.id }) }}">show</a>
                     </li>
                     <li>
-                        <a href="{{ path('product_edit', { 'id': entity.id }) }}">edit</a>
+                        <a href="{{ path('productcategory_edit', { 'id': entity.id }) }}">edit</a>
                     </li>
                 </ul>
             </td>
@@ -34,7 +34,7 @@
 
 <ul>
     <li>
-        <a href="{{ path('product_new') }}">
+        <a href="{{ path('productcategory_new') }}">
             Create a new entry
         </a>
     </li>

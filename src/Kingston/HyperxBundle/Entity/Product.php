@@ -1,11 +1,11 @@
 <?php
 
-namespace Acme\StoreBundle\Entity;
+namespace Kingston\HyperxBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Acme\StoreBundle\Entity\Product
+ * Kingston\HyperxBundle\Entity\Product
  *
  * @ORM\Table()
  * @ORM\Entity
@@ -29,18 +29,17 @@ class Product
     private $name;
 
     /**
-     * @var float $price
-     *
-     * @ORM\Column(name="price", type="float")
-     */
-    private $price;
-
-    /**
      * @var string $description
      *
      * @ORM\Column(name="description", type="text")
      */
     private $description;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="ProductCategory", inversedBy="products")
+     * @ORM\JoinColumn(name="product_category_id", referencedColumnName="id")
+     */
+    protected $category;
 
 
     /**
@@ -77,29 +76,6 @@ class Product
     }
 
     /**
-     * Set price
-     *
-     * @param float $price
-     * @return Product
-     */
-    public function setPrice($price)
-    {
-        $this->price = $price;
-    
-        return $this;
-    }
-
-    /**
-     * Get price
-     *
-     * @return float 
-     */
-    public function getPrice()
-    {
-        return $this->price;
-    }
-
-    /**
      * Set description
      *
      * @param string $description
@@ -120,5 +96,28 @@ class Product
     public function getDescription()
     {
         return $this->description;
+    }
+
+    /**
+     * Set category
+     *
+     * @param Kingston\HyperxBundle\Entity\ProductCategory $category
+     * @return Product
+     */
+    public function setCategory(\Kingston\HyperxBundle\Entity\ProductCategory $category = null)
+    {
+        $this->category = $category;
+    
+        return $this;
+    }
+
+    /**
+     * Get category
+     *
+     * @return Kingston\HyperxBundle\Entity\ProductCategory 
+     */
+    public function getCategory()
+    {
+        return $this->category;
     }
 }
