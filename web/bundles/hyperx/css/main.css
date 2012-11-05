@@ -275,10 +275,10 @@ div.b-lightbox-outer .content{ position: relative; padding-left: 28px; height: 1
 .g-goods .goods-cats #cat-descr .descr p{ margin: 0 0 5px}
 .g-goods .goods-cats .cats-cont{ width: 480px; height: 205px}
 .g-goods .goods-cats .cats{ display: block; width: 410px; overflow: auto; font-size: 14px; font-style: italic}
-.jScrollPaneContainer{ position: relative; float: right; overflow: auto}
+.jScrollPaneContainer{ position: relative; float: right;}
 .jScrollPaneTrack{ position: absolute; right: 0; height: 100%; width: 20px; background: url(../images/bg_scroll.png) center top repeat-y}
 .jScrollPaneDrag{ position: absolute; top: 0; width: 6px; height: 72px; cursor: pointer; background: url(../images/bg_scroll_drag.png) center top no-repeat}
-.goods-descr{ display: none; position: relative; float: right; overflow: hidden; height: 196px; width: 480px; margin: 32px 92px 0 0; font-size: 12px; font-family: Arial}
+.goods-descr{ position: relative; float: right; overflow: hidden; height: 196px; width: 480px; margin: 32px 92px 0 0; font-size: 12px; font-family: Arial}
 .goods-descr .jScrollPaneContainer{ height: 196px}
 #goods-descr-cont .inner{ width: 480px; height: 143px}
 .goods-descr h1{ float: left; margin-right: 70px; margin-bottom: 15px; font-family: "bicubikregular", Arial; text-transform: uppercase; font-size: 11px; color: #E11D39}
