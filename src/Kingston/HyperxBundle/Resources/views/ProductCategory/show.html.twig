@@ -3,34 +3,39 @@
         <div id="cont-goods" class="g-goods">
             <div class="b-goods-inner">
 		<div class="goods-cats">
-                    <ul class="top-menu"
-                        <li class="m1 active" data-cat-id="1" data-owner-id="0" id="cat-button-1"><span>Память</span></li>
-                        <li class="m2" data-cat-id="2" data-owner-id="0" id="cat-button-2"><span>SSD</span></li>			
-                        <li class="m0" data-cat-id="0" data-owner-id="0" id="cat-button-0"><span>Продукты</span></li>
+                    <ul class="top-menu">
+                        <li class="m1 {% if entity.id == 1 %}active{% endif %}" data-cat-id="1" data-owner-id="0" id="cat-button-1"><a href="{{ path('productcategory_show', { 'id': 1 }) }}"><span>Память</span></a></li>
+                        <li class="m2 {% if entity.id == 2 %}active{% endif %}" data-cat-id="2" data-owner-id="0" id="cat-button-2"><a href="{{ path('productcategory_show', { 'id': 2 }) }}"><span>SSD</span></a></li>			
+                        <li class="m0" data-cat-id="0" data-owner-id="0" id="cat-button-0"><a href="{{ path('productcategory')}}"><span>Продукты</span></a></li>
                     </ul>
                     <del class="clr"></del>
-                    <div class="goods-descr">
-                            <div id="goods-descr-cont"></div>
-                    </div>
-                    <div class="total-cats" id="total-cats" style="display: block;">
-                        <div class="cats-cont" id="cats-0" style="display: none;">
-                            <ul class="cats">
-                                <li class="c11">
-                                    <a data-cat-id="1" data-owner-id="0" href="#"><img alt="Модули памяти Kingston HyperX" src="http://hyperx.com.ua/files/catalog_cat/images/0/1/moduli-pamjati-kingston-hyperx_1_p0.png"></a>
-                                    <a class="title" data-cat-id="1" data-owner-id="0" href="#">Модули памяти Kingston <span>HyperX</span></a>
-                                    <del class="clr"></del>
-                                </li>
-                            </ul>
+
+                    <div class="total-cats" id="total-cats">
+                        <div class="jScrollPaneContainer" tabindex="0">
+                            <div class="cats-cont" id="cats-1">
+                                <ul class="cats">
+                                    {% for product in products %}
+                                    <li class="c1">
+                                        <div class="img">
+                                            <a class="sub-cat" data-owner-id="1" data-cat-id="5" href="{{ path('productcategory_product', { 'id': product.id }) }}"><img alt="{{ product.name }}" src="http://hyperx.com.ua/files/catalog_cat/images/0/5/predator_5_p0.png"></a>
+                                        </div>
+                                        <a class="title sub-cat" data-owner-id="1" data-cat-id="5" href="{{ path('productcategory_product', { 'id': product.id }) }}"><span>{{ product.name }}</a>
+                                        <del class="clr"></del>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+
             <a href="#" id="btn-go-back" style="display: block;"></a>
             <div class="b-check-original" style="display: block;">
                     <a href="http://www.kingston.com/ru/memory/hyperx/decoder/" target="_blank" class="ajx-std">Проверить оригинальность продукции &gt;&gt;</a>
                     <span>Проверка за одну минуту</span>
             </div>
         </div>
+    </div>
 
 
 
