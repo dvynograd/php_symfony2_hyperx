@@ -1,0 +1,33 @@
+generator: admingenerator.generator.doctrine
+params:
+  model: Kingston\HyperxBundle\Entity\Review
+  namespace_prefix: Kingston
+  bundle_name: HyperxBundle
+  fields: ~
+
+builders:
+  list:
+    params:
+      title: List of Reviews
+      display: [ id, title, description, date, is_active ]
+      actions:
+        new: ~
+      object_actions:
+        edit: ~
+        delete: ~
+  filters:
+    params:
+      display: ~
+  new:
+    params:
+      title: New object of Review
+      display: [ title, description, date, is_active, content ]
+      actions:
+        list: ~
+  edit:
+    params:
+      title: You're editing the object "%object%"|{ %object%: Review.title }|
+      display: [ title, description, date, is_active, content ]
+      actions:
+        list: ~
+  delete: ~

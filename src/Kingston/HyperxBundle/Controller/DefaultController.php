@@ -16,4 +16,13 @@ class DefaultController extends Controller
     {
         return array('name' => $name);
     }
+
+    /**
+     * @Route("/contactus")
+     * @Template()
+     */
+    public function contactusAction($name)
+    {
+        return array();
+    }
 }

@@ -1,0 +1,33 @@
+generator: admingenerator.generator.doctrine
+params:
+  model: Kingston\HyperxBundle\Entity\ProductCategory
+  namespace_prefix: Kingston
+  bundle_name: HyperxBundle
+  fields: ~
+
+builders:
+  list:
+    params:
+      title: List of Categories
+      display: ~
+      actions:
+        new: ~
+      object_actions:
+        edit: ~
+        delete: ~
+  filters:
+    params:
+      display: ~
+  new:
+    params:
+      title: New Category object
+      display: [ name, url]
+      actions:
+        list: ~
+  edit:
+    params:
+      title: You're editing the object "%object%"|{ %object%: ProductCategory.name }|
+      display: [ name, url]
+      actions:
+        list: ~
+  delete: ~

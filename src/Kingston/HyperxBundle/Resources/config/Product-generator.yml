@@ -1,0 +1,35 @@
+generator: admingenerator.generator.doctrine
+params:
+  model: Kingston\HyperxBundle\Entity\Product
+  namespace_prefix: Kingston
+  bundle_name: HyperxBundle
+  fields:
+      category:
+        filterOn: category.id
+
+builders:
+  list:
+    params:
+      title: List of Product
+      display: [ id, name, description, category ]
+      actions:
+        new: ~
+      object_actions:
+        edit: ~
+        delete: ~
+  filters:
+    params:
+      display: ~
+  new:
+    params:
+      title: New Product object
+      display: [ name, description, category ]
+      actions:
+        list: ~
+  edit:
+    params:
+      title: You're editing the object "%object%"|{ %object%: Product.name }|
+      display: [ name, description, category ]
+      actions:
+        list: ~
+  delete: ~
