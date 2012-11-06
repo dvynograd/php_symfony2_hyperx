@@ -11,25 +11,23 @@
                     <del class="clr"></del>
 
                     <div class="total-cats" id="total-cats">
-                        <div class="jScrollPaneContainer" tabindex="0">
-                            <div class="cats-cont" id="cats-1">
-                                <ul class="cats">
-                                    {% for product in products %}
-                                    <li class="c1">
-                                        <div class="img">
-                                            <a class="sub-cat" data-owner-id="1" data-cat-id="5" href="{{ path('productcategory_product', { 'id': product.id }) }}"><img alt="{{ product.name }}" src="http://hyperx.com.ua/files/catalog_cat/images/0/5/predator_5_p0.png"></a>
-                                        </div>
-                                        <a class="title sub-cat" data-owner-id="1" data-cat-id="5" href="{{ path('productcategory_product', { 'id': product.id }) }}"><span>{{ product.name }}</a>
-                                        <del class="clr"></del>
-                                    </li>
-                                    {% endfor %}
-                                </ul>
-                            </div>
+                        <div class="cats-cont" id="cats-1">
+                            <ul class="cats">
+                                {% for product in products %}
+                                <li class="c1">
+                                    <div class="img">
+                                        <a class="sub-cat" data-owner-id="1" data-cat-id="5" href="{{ path('productcategory_product', { 'id': product.id }) }}"><img alt="{{ product.name }}" src="http://hyperx.com.ua/files/catalog_cat/images/0/5/predator_5_p0.png"></a>
+                                    </div>
+                                    <a class="title sub-cat" data-owner-id="1" data-cat-id="5" href="{{ path('productcategory_product', { 'id': product.id }) }}"><span>{{ product.name }}</a>
+                                    <del class="clr"></del>
+                                </li>
+                                {% endfor %}
+                            </ul>
                         </div>
                     </div>
                 </div>
 
-            <a href="#" id="btn-go-back" style="display: block;"></a>
+            <a href="{{ path('productcategory')}}" id="btn-go-back" class="d-block"></a>
             <div class="b-check-original" style="display: block;">
                     <a href="http://www.kingston.com/ru/memory/hyperx/decoder/" target="_blank" class="ajx-std">Проверить оригинальность продукции &gt;&gt;</a>
                     <span>Проверка за одну минуту</span>
