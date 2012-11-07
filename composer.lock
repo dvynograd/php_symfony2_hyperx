@@ -1,6 +1,45 @@
 {
-    "hash": "301cd9d9ea27454cddd586afebac349a",
+    "hash": "4efd79fa6857e71c9c6a1dc8c4fd0cf1",
     "packages": [
+        {
+            "name": "cedriclombardot/admingenerator-activeadmintheme-bundle",
+            "version": "dev-master",
+            "target-dir": "Admingenerator/ActiveAdminThemeBundle",
+            "source": {
+                "type": "git",
+                "url": "git://github.com/symfony2admingenerator/AdmingeneratorActiveAdminThemeBundle.git",
+                "reference": "ae4f837600734b837a1104ec2d29aca82f0186e9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/symfony2admingenerator/AdmingeneratorActiveAdminThemeBundle/zipball/ae4f837600734b837a1104ec2d29aca82f0186e9",
+                "reference": "ae4f837600734b837a1104ec2d29aca82f0186e9",
+                "shasum": ""
+            },
+            "require": {
+                "cedriclombardot/admingenerator-generator-bundle": "*",
+                "cedriclombardot/admingenerator-oldtheme-bundle": "*"
+            },
+            "time": "1350065774",
+            "type": "symfony-bundle",
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "Admingenerator\\ActiveAdminThemeBundle": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cedric LOMBARDOT",
+                    "email": "cedric.lombardot@gmail.com"
+                }
+            ],
+            "description": "The rails admin theme for the symfony2 generator",
+            "homepage": "http://symfony2admingenerator.org/"
+        },
         {
             "name": "cedriclombardot/admingenerator-generator-bundle",
             "version": "dev-master",
@@ -109,6 +148,37 @@
                 "yaml",
                 "theme"
             ]
+        },
+        {
+            "name": "cedriclombardot/admingenerator-user-bundle",
+            "version": "dev-master",
+            "target-dir": "Admingenerator/UserBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony2admingenerator/AdmingeneratorUserBundle",
+                "reference": "55f030820362779907425e1251cc6624ddfe3d83"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/symfony2admingenerator/AdmingeneratorUserBundle/zipball/55f030820362779907425e1251cc6624ddfe3d83",
+                "reference": "55f030820362779907425e1251cc6624ddfe3d83",
+                "shasum": ""
+            },
+            "time": "1351269233",
+            "type": "library",
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "Admingenerator\\UserBundle": ""
+                }
+            },
+            "authors": [
+                {
+                    "name": "Cedric LOMBARDOT",
+                    "email": "cedric.lombardot@gmail.com"
+                }
+            ],
+            "description": "This package is a part of the Symfony2 Admin Generator based on YAML configuration and Twig templating. But could also work standalone."
         },
         {
             "name": "cedriclombardot/twig-generator",
@@ -520,6 +590,76 @@
             ]
         },
         {
+            "name": "friendsofsymfony/user-bundle",
+            "version": "dev-master",
+            "target-dir": "FOS/UserBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfSymfony/FOSUserBundle",
+                "reference": "a197484ad0b53a056e07a13b639ed69466c06c95"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/FriendsOfSymfony/FOSUserBundle/zipball/a197484ad0b53a056e07a13b639ed69466c06c95",
+                "reference": "a197484ad0b53a056e07a13b639ed69466c06c95",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "symfony/framework-bundle": ">=2.1,<2.3-dev",
+                "symfony/security-bundle": ">=2.1,<2.3-dev"
+            },
+            "require-dev": {
+                "twig/twig": "*",
+                "doctrine/doctrine-bundle": "*",
+                "swiftmailer/swiftmailer": "*",
+                "willdurand/propel-typehintable-behavior": "dev-master",
+                "symfony/validator": "2.1.*",
+                "symfony/yaml": "2.1.*"
+            },
+            "suggest": {
+                "doctrine/couchdb-odm-bundle": "*",
+                "doctrine/doctrine-bundle": "*",
+                "doctrine/mongodb-odm-bundle": "*"
+            },
+            "time": "1351955784",
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "FOS\\UserBundle": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christophe Coevoet",
+                    "email": "stof@notk.org"
+                },
+                {
+                    "name": "Thibault Duplessis",
+                    "email": "thibault.duplessis@gmail.com",
+                    "homepage": "http://ornicar.github.com"
+                },
+                {
+                    "name": "FriendsOfSymfony Community",
+                    "homepage": "https://github.com/friendsofsymfony/FOSUserBundle/contributors"
+                }
+            ],
+            "description": "Symfony FOSUserBundle",
+            "homepage": "http://friendsofsymfony.github.com",
+            "keywords": [
+                "User management"
+            ]
+        },
+        {
             "name": "jms/aop-bundle",
             "version": "1.0.0",
             "target-dir": "JMS/AopBundle",
@@ -845,19 +985,19 @@
             "source": {
                 "type": "git",
                 "url": "http://github.com/KnpLabs/KnpMenuBundle.git",
-                "reference": "6040c533f561da285e38e8bda271d7aaaf62fd10"
+                "reference": "471ad25ea4fcc469f901a85bc5ca530b0bc68624"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/KnpLabs/KnpMenuBundle/zipball/6040c533f561da285e38e8bda271d7aaaf62fd10",
-                "reference": "6040c533f561da285e38e8bda271d7aaaf62fd10",
+                "url": "https://github.com/KnpLabs/KnpMenuBundle/zipball/471ad25ea4fcc469f901a85bc5ca530b0bc68624",
+                "reference": "471ad25ea4fcc469f901a85bc5ca530b0bc68624",
                 "shasum": ""
             },
             "require": {
                 "knplabs/knp-menu": "2.0.*",
                 "symfony/framework-bundle": ">=2.0,<2.3-dev"
             },
-            "time": "1350241999",
+            "time": "1351767907",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -964,12 +1104,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog",
-                "reference": "38bb472abb27db138536f845f7d259c1c47bbd3f"
+                "reference": "30b48f1231b041bfd363517a77a3a2ea02b1f576"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/Seldaek/monolog/zipball/38bb472abb27db138536f845f7d259c1c47bbd3f",
-                "reference": "38bb472abb27db138536f845f7d259c1c47bbd3f",
+                "url": "https://github.com/Seldaek/monolog/zipball/30b48f1231b041bfd363517a77a3a2ea02b1f576",
+                "reference": "30b48f1231b041bfd363517a77a3a2ea02b1f576",
                 "shasum": ""
             },
             "require": {
@@ -983,7 +1123,7 @@
                 "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
                 "ext-mongo": "Allow sending log messages to a MongoDB server"
             },
-            "time": "1351084926",
+            "time": "1352047076",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1429,12 +1569,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/symfony/symfony.git",
-                "reference": "297e00afb4f031ff42ddec6307ecefb411b6f0cc"
+                "reference": "3d993740142a4cef26336b8d5f20526367dca110"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/symfony/zipball/297e00afb4f031ff42ddec6307ecefb411b6f0cc",
-                "reference": "297e00afb4f031ff42ddec6307ecefb411b6f0cc",
+                "url": "https://github.com/symfony/symfony/zipball/3d993740142a4cef26336b8d5f20526367dca110",
+                "reference": "3d993740142a4cef26336b8d5f20526367dca110",
                 "shasum": ""
             },
             "require": {
@@ -1483,7 +1623,7 @@
                 "propel/propel1": "dev-master",
                 "monolog/monolog": "1.*"
             },
-            "time": "1351590273",
+            "time": "1352017759",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1569,18 +1709,18 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/fabpot/Twig.git",
-                "reference": "0879472d7ecfd6b5714b066da152e005d7781b5b"
+                "reference": "abec35b833abfce5eb0ac7ce2bf2bf3462a5bebf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/fabpot/Twig/zipball/0879472d7ecfd6b5714b066da152e005d7781b5b",
-                "reference": "0879472d7ecfd6b5714b066da152e005d7781b5b",
+                "url": "https://github.com/fabpot/Twig/archive/abec35b833abfce5eb0ac7ce2bf2bf3462a5bebf.zip",
+                "reference": "abec35b833abfce5eb0ac7ce2bf2bf3462a5bebf",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.4"
             },
-            "time": "1351620822",
+            "time": "1352101924",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1663,6 +1803,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "doctrine/doctrine-fixtures-bundle": 20,
-        "cedriclombardot/admingenerator-generator-bundle": 20
+        "cedriclombardot/admingenerator-activeadmintheme-bundle": 20,
+        "cedriclombardot/admingenerator-user-bundle": 20,
+        "knplabs/knp-menu-bundle": 20
     }
 }

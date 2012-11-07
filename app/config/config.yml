@@ -4,7 +4,7 @@ imports:
 
 framework:
     #esi:             ~
-    #translator:      { fallback: %locale% }
+    translator: ~
     secret:          %secret%
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -58,21 +58,21 @@ swiftmailer:
     password:  %mailer_password%
     spool:     { type: memory }
 
+fos_user:
+    db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
+    firewall_name: main
+    user_class: Kingston\HyperxBundle\Entity\User
+
 admingenerator_generator:
-    templates_dirs: [ %kernel.root_dir%/../vendor/cedriclombardot/admingenerator-oldtheme-bundle/Admingenerator/OldThemeBundle/Resources/templates ]
-    base_admin_template: AdmingeneratorGeneratorBundle::base_admin.html.twig
+    base_admin_template: AdmingeneratorActiveAdminThemeBundle::base_admin_assetic_less.html.twig
     use_propel: false
     use_doctrine_orm: true
     use_doctrine_odm: false
+    templates_dirs: [ %kernel.root_dir%/../vendor/cedriclombardot/admingenerator-oldtheme-bundle/Admingenerator/OldThemeBundle/Resources/templates ]
+    knp_menu_class: Kingston\HyperxBundle\Menu\AdminMenu
 
 knp_menu:
     twig: true
 
 jms_security_extra:
     expressions: true
-
-assetic:
-    filters:
-        compass: ~
-        sass: ~
-

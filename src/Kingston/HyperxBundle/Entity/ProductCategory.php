@@ -164,4 +164,9 @@ class ProductCategory
     {
         return $this->url;
     }
+
+    public function __toString()
+    {
+        return $this->name;
+    }
 }

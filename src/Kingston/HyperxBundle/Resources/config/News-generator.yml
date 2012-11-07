@@ -1,0 +1,33 @@
+generator: admingenerator.generator.doctrine
+params:
+  model: Kingston\HyperxBundle\Entity\News
+  namespace_prefix: Kingston
+  bundle_name: HyperxBundle
+  fields: ~
+
+builders:
+  list:
+    params:
+      title: List of News
+      display: [ id, title, description, date, is_active ]
+      actions:
+        new: ~
+      object_actions:
+        edit: ~
+        delete: ~
+  filters:
+    params:
+      display: ~
+  new:
+    params:
+      title: New object of News
+      display: [ title, description, date, is_active, content ]
+      actions:
+        list: ~
+  edit:
+    params:
+      title: You're editing the object "%object%"|{ %object%: News.title }|
+      display: [ title, description, date, is_active, content ]
+      actions:
+        list: ~
+  delete: ~
