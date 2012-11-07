@@ -1,0 +1,29 @@
+{% extends "KingstonHyperxBundle::layout.html.twig" %}
+{% block content %}
+    <div id="cont-feedback">
+        <h3 id="cont-feedback-title">Обратная связь</h3>
+        <del class="clr"></del>
+        <div style="display: block; height: 595px;" id="cont-feedback-inner">
+            <form p-action="/faq/ajx/1/method/post/" id="f-add-qa" method="post" enctype="multipart/form-data" action="" class="b-form frmAjx">
+
+                <p>Ваше имя <ins>*</ins></p>
+                <div class="s"><input type="text" name="ch_elem[title]" id="title" class="b-input  b-input-mandatory" size="" value="" style=""><span class="input-maxlength" id="title_length_container">0/255</span></div>
+                <ins class="clr"></ins>
+
+                <p>E-mail <ins>*</ins></p>
+                <div class="s"><input type="text" name="ch_elem[email]" id="email" class="b-input  b-input-mandatory" size="" value="" style=""><span class="input-maxlength" id="email_length_container">0/64</span></div>
+                <ins class="clr"></ins>
+
+                <p>Ваше сообщение <ins>*</ins></p>
+                <div class="s"><textarea data-type="text" class="b-input  b-input-mandatory" name="ch_elem[descr]" id="descr" cols="0" rows="0" style=""></textarea><span class="input-maxlength" id="descr_length_container">0/5000</span></div>
+                <ins class="clr"></ins>
+
+
+                <div class="submit-container">
+                    <input type="submit" class="submit" value="Отправить">
+                    <p>Отмеченные поля заполняются обязательно</p>
+                </div>    
+            </form>
+        </div>
+    </div>
+{% endblock %}

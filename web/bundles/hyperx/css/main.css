@@ -13,6 +13,7 @@ body{ font-family: "bicubikregular", Arial, sans-serif; color: #fff; background:
 .clr{ clear: both; display: block; font-size: 1px}
 .i-clr{display:block; width: 100%; height: 1px; clear: right; font-size: 1px}
 .h {display: none}
+.d-block {display :block !important;}
 .imggray {filter: gray;}
 .imgcolor {filter: none;}
 .pointer{cursor: pointer}
@@ -161,9 +162,9 @@ div.b-lightbox-outer .content{ position: relative; padding-left: 28px; height: 1
 .pager span.active{ background: url(../images/btn_pager_act.png) left top no-repeat}
 .g-header {height: 192px; overflow: hidden; width: 100%; min-width: 1200px}
 .g-header .inner{ position: relative; min-width: 1176px; max-width: 1600px; height: 192px; padding: 0 10px; margin: 0 auto;}
-.g-header .z1{ position: absolute; left: 0px; top: 0; width: 616px; height: 192px; opacity:1; background: url(../images/bg_header_z1_l.png) right top no-repeat}
-.g-header .z2{ z-index: 1; position: absolute; right: -1438px; top: 0; width: 2500px; height: 192px; opacity:1; background: url(../images/bg_header_z2_r.png) left top no-repeat}
-.g-header .z3{ z-index: 2; position: absolute; left: -1373px; top: 0; width: 2000px; height: 192px; opacity:1; background: url(../images/bg_header_z3_l.png) right top no-repeat}
+.g-header .z1{ position: absolute; left: -704px; top: 0; width: 616px; height: 192px; opacity:1; background: url(../images/bg_header_z1_l.png) right top no-repeat}
+.g-header .z2{ z-index: 1; position: absolute; right: -2557px; top: 0; width: 2500px; height: 192px; background: url(../images/bg_header_z2_r.png) left top no-repeat}
+.g-header .z3{ z-index: 2; position: absolute; left: -2090px; top: 0; width: 2000px; height: 192px; background: url(../images/bg_header_z3_l.png) right top no-repeat}
 .g-header .b-menu{ position: relative; z-index: 4; float: left; margin: 0 0px 0 485px; font-style: italic}
 .g-header .b-menu li{ float: left; margin-left: 12px; padding-top: 24px; padding-left: 13px; background: url(../images/bg_menu_item.png) left top no-repeat}
 .g-header .b-menu li.first{ background: none}
@@ -186,18 +187,17 @@ div.b-lightbox-outer .content{ position: relative; padding-left: 28px; height: 1
 #actions-slider li p{ font-size: 10px}
 .g-header .action .pager{ position: absolute; z-index: 100; bottom: 0px; left: 0px}
 .g-container {position: relative; min-height: 715px; min-width: 1176px; max-width: 1600px; margin: 0 auto; overflow: hidden}
-.b-news{ display: block; position: absolute; bottom: 0px; right: 109px; width: 420px; height: 305px; padding-left: 81px; padding-top: 12px; background: url(../images/bg_news_new_transp.png) left top no-repeat}
+.b-news{ display: block; position: absolute; bottom: -305px; right: 109px; width: 420px; height: 305px; padding-left: 81px; padding-top: 12px; background: url(../images/bg_news_new_transp.png) left top no-repeat}
 .b-news h3{ float: left; margin-bottom: 9px; margin-right: 36px; text-transform: uppercase; font-size: 14px; font-style: italic}
 .b-news-list .item{ display: block; width: 390px; margin: 0; padding: 6px 8px; font-size: 12px; border-bottom: 1px solid #000}
 .actions-list .item{ width: auto;}
-.actions-list .jScrollPaneContainer { height: 595px; width: 587px;}
 .b-news-list .item small{ display: block; margin: 0 0 3px; font-family: Arial; font-size: 10px; color: #000}
 .b-news-list .item a{ display: block; text-decoration: none; font-family: 'Play', sans-serif; font-size: 14px; line-height: 15px; color: #fff}
 .b-news-list .item img{ float: right; width: 64px; margin-left: 25px}
 .b-news-list .item p{ color: silver; font-size: 11px; font-family: Arial, sans-serif; margin-top: 4px; line-height: 130%}
 #news-slider {overflow: auto; width: 420px; height: 420px}
 #news-slider li{ float: left; width: 420px}
-.b-reviews {display: block; position: absolute; width: 535px; height: 181px; left: 0px; bottom: 480px; background: url(../images/bg_review.png) left top no-repeat}
+.b-reviews {display: block; position: absolute; width: 535px; height: 181px; left: -535px; bottom: 234px; background: url(../images/bg_review.png) left top no-repeat}
 .goods-page .b-reviews  {bottom:234px;}
 .b-reviews h3{ display: block; margin: 6px 0 18px 57px; text-transform: uppercase; font-size: 14px; font-style: italic; color: #fff}
 .b-reviews .item{ display: block; height: 105px; overflow: hidden; margin: 0}
@@ -218,8 +218,8 @@ div.b-lightbox-outer .content{ position: relative; padding-left: 28px; height: 1
 .b-select-config{ display: none; position: absolute; bottom: 6px; right: 27px; float: right; width: 354px; height: 30px; margin: 0 54px 0 0; line-height: 30px; text-transform: uppercase; font-style: italic; font-size: 11px; text-align: right; background: url(../images/bg_select_configuration.png) left top no-repeat}
 .b-select-config a{ display: block; margin: 0px 15px 0; color: #fff; text-decoration: none; font-size: 12px}
 .g-goods{ position: absolute; display: block; right: -1029px; top: 1%; width: 636px; height: 337px}
-#cont-goods {right:0;}
-#cont-goods-buy-info {top: 6%; right:318px;}
+
+#cont-goods-buy-info {top: 6%;}
 .g-goods .b-goods-inner{ position: relative; z-index: 3; width: 636px; height: 298px; background: url(../images/bg_goods_control.png) left top no-repeat}
 #cont-goods-buy-info .b-goods-inner {background: url(../images/bg_goods_control_transp.png) left top no-repeat}
 .g-goods .b-goods-inner .b-check-original{ position: absolute; bottom: 0; right: 27px}
@@ -275,10 +275,10 @@ div.b-lightbox-outer .content{ position: relative; padding-left: 28px; height: 1
 .g-goods .goods-cats #cat-descr .descr p{ margin: 0 0 5px}
 .g-goods .goods-cats .cats-cont{ width: 480px; height: 205px}
 .g-goods .goods-cats .cats{ display: block; width: 410px; overflow: auto; font-size: 14px; font-style: italic}
-.jScrollPaneContainer{ position: relative; float: right; overflow: auto}
+.jScrollPaneContainer{ position: relative; float: right; overflow: hidden;}
 .jScrollPaneTrack{ position: absolute; right: 0; height: 100%; width: 20px; background: url(../images/bg_scroll.png) center top repeat-y}
 .jScrollPaneDrag{ position: absolute; top: 0; width: 6px; height: 72px; cursor: pointer; background: url(../images/bg_scroll_drag.png) center top no-repeat}
-.goods-descr{ display: none; position: relative; float: right; overflow: hidden; height: 196px; width: 480px; margin: 32px 92px 0 0; font-size: 12px; font-family: Arial}
+.goods-descr { position: relative; float: right; overflow: hidden; height: 196px; width: 480px; margin: 32px 92px 0 0; font-size: 12px; font-family: Arial; display: none;}
 .goods-descr .jScrollPaneContainer{ height: 196px}
 #goods-descr-cont .inner{ width: 480px; height: 143px}
 .goods-descr h1{ float: left; margin-right: 70px; margin-bottom: 15px; font-family: "bicubikregular", Arial; text-transform: uppercase; font-size: 11px; color: #E11D39}
@@ -307,12 +307,12 @@ a.sub-cat, a.sub-cat:hover{ text-decoration: none}
 .g-goods .goods-cats .cats li .title:hover span{ color: #fff}
 .g-footer {z-index: 500; position: fixed; width: 100%; bottom: -1px; left: 0px; display: block; height: 92px}
 .g-footer .inner {position: relative; min-width: 1176px; max-width: 1600px; height: 92px; margin: 0 auto}
-.g-footer div.z4{ position: absolute; left: -1737px; top: 0; width: 2507px; height: 92px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); -moz-opacity:1; opacity: 1; background: url(../images/bg_footer2.png) left top no-repeat}
+.g-footer div.z4{ position: absolute; left: -2605px; top: 0; width: 2507px; height: 92px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); -moz-opacity:1; opacity: 0; background: url(../images/bg_footer2.png) left top no-repeat}
 .g-footer ul{ float: right; margin: 65px 317px 0 0; font-size: 11px}
 .g-footer ul li{ float: left; margin: 0 32px 0 0}
 .g-footer ul li a{ color: #fff; text-decoration: none}
 .g-footer ul li a:hover{ color: #E11D39}
-#news-full{ position: absolute; z-index: 600; width: 572px; height: 2000px; bottom: -1295px; right: 109px; background: url(../images/bg_news_full_transp.png) left top no-repeat; padding-left: 30px; padding-top: 0px}
+#news-full{ position: absolute; z-index: 600; width: 572px; height: 2000px; bottom: -2000px; right: 109px; background: url(../images/bg_news_full_transp.png) left top no-repeat; padding-left: 30px; padding-top: 0px}
 .b-actions-full {background: url(../images/bg_actions_full_transp.png) left top no-repeat !important}
 #news-full h3  { float: right; margin-right: 9px; margin-top: 6px; margin-bottom: 56px; text-transform: uppercase; font-size: 14px; font-style: italic; color: #fff;}
 #news-full a#news-cont-title { float: right; margin-right: 9px; margin-top: 6px; margin-bottom: 56px; text-transform: uppercase; font-size: 14px; font-style: italic; color: #fff; text-decoration: none; font-weight: bold;}
@@ -414,7 +414,7 @@ a.sub-cat, a.sub-cat:hover{ text-decoration: none}
 .b-multimedia .cats td.c2 img{ margin-right: 20px}
 .b-multimedia .cats td .title span{ color: #e11d39}
 .b-multimedia .cats td .title:hover span{ color: #fff}
-#cont-feedback {display: block; font-size: 12px; position: absolute; z-index: 200; width: 545px; height: 2000px; right:109px; bottom: -1295px; background: url(../images/bg_feedback_transp.png) left top no-repeat; padding-left: 57px; padding-top: 0px}
+#cont-feedback {display: block; font-size: 12px; position: absolute; z-index: 200; width: 545px; height: 2000px; bottom: -2000px; background: url(../images/bg_feedback_transp.png) left top no-repeat; padding-left: 57px; padding-top: 0px}
 #cont-feedback h3{ float: right; margin-right: 9px; margin-top: 6px; margin-bottom: 34px; text-transform: uppercase; font-size: 14px; font-style: italic; color: #414042}
 #cont-feedback-inner {width: 506px; height: 505px; font-family: Arial, sans-serif}
 #cont-feedback-inner p{ display: block; margin: 0 0 4px}

@@ -3,9 +3,6 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link href='http://fonts.googleapis.com/css?family=Play&subset=latin,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
-    <noscript>
-        <link rel="StyleSheet" media="print" href="{{ asset('bundles/hyperx/css/print-src.css') }}" type="text/css" />
-    </noscript>
     <link rel="stylesheet" href="{{ asset('bundles/hyperx/css/main.css') }}" />
     <!--[if lt IE 9]>
     <link rel="stylesheet" href="{{ asset('bundles/hyperx/css/style_ie.css') }}" type="text/css" media="screen, projection"/>
@@ -13,6 +10,10 @@
     <!--[if lt IE 8]>
     <link rel="stylesheet" href="{{ asset('bundles/hyperx/css/style_ie7.css') }}" type="text/css" media="screen, projection"/>
     <![endif]-->
+    <noscript>
+        <link rel="StyleSheet" media="print" href="{{ asset('bundles/hyperx/css/print-src.css') }}" type="text/css" />
+        <link rel="stylesheet" href="{{ asset('bundles/hyperx/css/noscript.css') }}" />
+    </noscript>
     <title>{% block title %}Обзоры - Kingston Hyper-X{% endblock %}</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -35,8 +36,10 @@
         var domain = 'http://hyperx.com.ua';
         //]]>
     </script>
-    <!--script type="text/javascript" src="languages/ru.lang.v1346090394.js"></script>
-    <script type="text/javascript" src="js/core.v1.js"></script-->
+    <script type="text/javascript" src="{{ asset('bundles/hyperx/languages/ru.lang.v1346090394.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/hyperx/js/core.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/hyperx/js/jquery.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/hyperx/js/project.js') }}"></script>
 
 
     <link rel="alternate" type="application/atom+xml" title=" (Atom)" href="http://hyperx.com.ua/news/xml/atom/smphr/1/index.xml" />
@@ -102,15 +105,16 @@
                 <span><a href="#">SPEEDTEST</a></span>
             </div>
 
-            <a href="http://www.facebook.com/KingstonUa/app_12469973101352" target="_blank" rel="nofollow" class="fb">SHARE</a>        </div>
+            <a href="http://www.facebook.com/KingstonUa/app_12469973101352" target="_blank" rel="nofollow" class="fb">SHARE</a>        
+        </div>
     </div>
 </div>
 
 <!-- END CLIP -->
 <div class="g-container">
     <div class="inner">
-{% block content %}
-{% endblock %}
+        {% block content %}
+        {% endblock %}
     </div>
 </div>
 
@@ -122,7 +126,7 @@
         <div class="z4" id="cont-footer">
             <ul>
                 <li><a id="btn-where-to-buy" href="/where-to-buy/">ГДЕ КУПИТЬ?</a></li>
-                <li><a id="btn-faq" href="/faq/">Обратная связь</a></li>
+                <li><a id="btn-faq" href="{{ path('contactus') }}">Обратная связь</a></li>
             </ul>
         </div>
     </div>

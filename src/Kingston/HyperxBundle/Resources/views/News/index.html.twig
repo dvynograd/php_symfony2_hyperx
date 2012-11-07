@@ -29,18 +29,16 @@
             <h3 id="news-cont-title" data-href="/news/">Новости</h3>
             <del class="clr"></del>
             <div class="news-inn">
-                <div class="jScrollPaneContainer" style="height: 595px; width: 587px;" tabindex="0">
-                    <div id="news-full-cont">
-                        <div class="b-news-list b-news-list-inner b-news-list">
-                            {% for entity in entities %}
-                            <div class="item">
-                                <small>{% if entity.date %}{{ entity.date|date('d/m/Y') }}{% endif %}</small>
-                                <a href="{{ path('news_show', { 'id': entity.id }) }}" data-id="{{ entity.id }}"><img alt="Турнир по StarCraft II от Kingston с призовым фондом $15 тысяч" src="http://hyperx.com.ua/files/news_tape/images/0/48/turnir-po-starcraft-ii-ot-king_48_s100.png">{{ entity.title }}</a>
-                                <p>{{ entity.description }}</p>
-                                <del class="clr"></del>
-                            </div>
-                            {% endfor %}
+                <div id="news-full-cont">
+                    <div class="b-news-list b-news-list-inner b-news-list">
+                        {% for entity in entities %}
+                        <div class="item">
+                            <small>{% if entity.date %}{{ entity.date|date('d/m/Y') }}{% endif %}</small>
+                            <a href="{{ path('news_show', { 'id': entity.id }) }}" data-id="{{ entity.id }}"><img alt="Турнир по StarCraft II от Kingston с призовым фондом $15 тысяч" src="http://hyperx.com.ua/files/news_tape/images/0/48/turnir-po-starcraft-ii-ot-king_48_s100.png">{{ entity.title }}</a>
+                            <p>{{ entity.description }}</p>
+                            <del class="clr"></del>
                         </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
