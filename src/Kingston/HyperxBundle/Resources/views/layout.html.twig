@@ -3,7 +3,9 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link href='http://fonts.googleapis.com/css?family=Play&subset=latin,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="{{ asset('bundles/hyperx/css/main.css') }}" />
+    <link rel="stylesheet" href="{{ asset('bundles/hyperx/css/main.css') }}" /> 
+    <!--link rel="stylesheet" href="http://hyperx.com.ua/css/build/main.v2.css" /--> 
+    
     <!--[if lt IE 9]>
     <link rel="stylesheet" href="{{ asset('bundles/hyperx/css/style_ie.css') }}" type="text/css" media="screen, projection"/>
     <![endif]-->
@@ -38,8 +40,6 @@
     </script>
     <script type="text/javascript" src="{{ asset('bundles/hyperx/languages/ru.lang.v1346090394.js') }}"></script>
     <script type="text/javascript" src="{{ asset('bundles/hyperx/js/core.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('bundles/hyperx/js/jquery.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('bundles/hyperx/js/project.js') }}"></script>
 
 
     <link rel="alternate" type="application/atom+xml" title=" (Atom)" href="http://hyperx.com.ua/news/xml/atom/smphr/1/index.xml" />
@@ -63,7 +63,7 @@
 
 
 </head>
-<body class="reviews-page">
+<body>
 
 <!-- CLIP -->
 
@@ -91,10 +91,12 @@
         </div>
         <div class="z2" id="cont-menu">
             <ul class="b-menu">
+                {% block menu %}
                 <li><a id="btn-goods" href="{{ path('productcategory') }}">Продукты</a></li>
                 <li><a id="btn-news" href="{{ path('news') }}">Новости</a></li>
                 <li><a id="btn-reviews" href="{{ path('review') }}">Обзоры</a></li>
                 <li><a id="btn-actions" href="{{ path('action') }}">Акции</a></li>
+                {% endblock %}
             </ul>
             <a class="b-href-xtreme" target="_blank" href="http://xtremelabs.org/"></a>
             <a class="b-href-navi" target="_blank" href="http://navi-gaming.com/"></a>
@@ -113,6 +115,11 @@
 <!-- END CLIP -->
 <div class="g-container">
     <div class="inner">
+        {% block redirect %}
+        <script type="text/javascript">
+            location="{{ path('home') }}"
+        </script>
+        {% endblock %}        
         {% block content %}
         {% endblock %}
     </div>
@@ -142,9 +149,10 @@
     $p.ajax.checkAjaxPage(0);
     //]]>
     </script>
-
-    <!--script type="text/javascript" src="js/jquery.v2.js"></script>
-    <script type="text/javascript" src="js/project.v1.js"></script-->
+    <script type="text/javascript" src="{{ asset('bundles/hyperx/js/jquery.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/hyperx/js/project.js') }}"></script>
+    <!--script type="text/javascript" src="http://hyperx.com.ua/js/build/jquery.v2.js"></script>
+    <script type="text/javascript" src="http://hyperx.com.ua/js/project.v1.js"></script-->
 
     <script type="text/javascript">//<![CDATA[
     project.pseudoReady();
@@ -193,12 +201,10 @@
 
 
 <script type="text/javascript">//<![CDATA[
-$p.events.attachLoad(function(){portal.css.load('/css/project/print-src.v1346090393.css', {'media' : 'print'})});
+$p.events.attachLoad(function(){portal.css.load("{{ asset('bundles/hyperx/css/print-src.css') }}", {'media' : 'print'})});
 //]]>
 </script>
 
 
 </body>
 </html>
-
-
