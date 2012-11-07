@@ -61,7 +61,7 @@ swiftmailer:
 fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
-    user_class: Admingenerator\DemoBundle\Entity\User
+    user_class: Kingston\HyperxBundle\Entity\User
 
 admingenerator_generator:
     base_admin_template: AdmingeneratorActiveAdminThemeBundle::base_admin_assetic_less.html.twig
