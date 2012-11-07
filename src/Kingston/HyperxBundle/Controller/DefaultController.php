@@ -18,10 +18,10 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/contactus")
+     * @Route("/contactus", name="contactus")
      * @Template()
      */
-    public function contactusAction($name)
+    public function contactusAction()
     {
         return array();
     }
