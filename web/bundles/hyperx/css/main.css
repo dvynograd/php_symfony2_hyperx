@@ -1,4 +1,4 @@
- html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent}
 body {line-height: 1}
 ol, ul {list-style: none}
 blockquote, q {quotes: none}
@@ -227,7 +227,7 @@ div.b-lightbox-outer .content{ position: relative; padding-left: 28px; height: 1
 .g-goods .b-goods-inner .b-check-original span{ display: block; margin: 0 33px 0 0}
 .g-goods .b-goods-inner #btn-go-back {position: absolute; display: none; width: 42px; height: 26px; left: -1px; bottom: 35px; background: url(../images/ico_back.png) left top no-repeat}
 .g-goods .b-goods-inner #btn-go-back:hover {background: url(../images/ico_back_act.png) left top no-repeat}
-.g-goods .goods-list{ display: block; position: absolute; visibility: hidden; z-index: 2; /*width: 559px; height: 76px;*/ width: 1px; height: 1px; right: 68px; bottom: 77px; background: url(../../images/bg_goods_scroller.png?1) bottom center no-repeat}
+.g-goods .goods-list{ display: block; position: absolute; visibility: hidden; z-index: 2; /*width: 559px; height: 76px;*/ width: 1px; height: 1px; right: 68px; bottom: 77px; background: url(../images/bg_goods_scroller.png?1) bottom center no-repeat}
 .g-goods .goods-list .list {position: relative; width: 559px; height: 76px; margin: 0 auto; overflow: visible}
 .g-goods .goods-list .list ul{ position: relative; display: block; width: 469px; height: 54px; margin: 0 auto; padding-top: 15px; overflow: hidden}
 .g-goods .goods-list .list ul.l1{ z-index: 1; background: white}
@@ -240,10 +240,10 @@ div.b-lightbox-outer .content{ position: relative; padding-left: 28px; height: 1
 .g-goods .goods-list .list ul.l1 li img.picture-cat-6, .g-goods .goods-list .list ul.l1 li img.picture-cat-8{ width: 70px}
 .g-goods .goods-list .list ul.l2 li img{ filter:progid:DXImageTransform.Microsoft.Alpha(opacity=30); -moz-opacity:0.3; opacity: 0.3}
 /*, .g-goods .goods-list .list ul.active img*/ .g-goods .goods-list .list ul.l2 li:hover img{ filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); -moz-opacity:0; opacity: 0}
-.g-goods .goods-list .list .mask{ position: absolute; z-index: 6; width: 559px; height: 76px; right: 0px; bottom: 0px; background: url(../../images/bg_goods_scroller.png?1) bottom center no-repeat}
-.g-goods .goods-list .btn-l{ position: absolute; display: block; z-index: 100; width: 12px; height: 15px; left: 15px; top: 31px; background: url(../../images/btn_scroll_l.png) left top no-repeat}
-.g-goods .goods-list .btn-r{ position: absolute; display: block; z-index: 100; width: 12px; height: 15px; right: 15px; top: 31px; background: url(../../images/btn_scroll_r.png) left top no-repeat}
-.g-goods .goods-big {position: absolute; z-index: 1; top: 42px; left: 0px; width: 508px; height: 228px; display: block; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); -moz-opacity:0; opacity: 0; background: url(../../images/bg_img_big_empty.png) left top no-repeat}
+.g-goods .goods-list .list .mask{ position: absolute; z-index: 6; width: 559px; height: 76px; right: 0px; bottom: 0px; background: url(../images/bg_goods_scroller.png?1) bottom center no-repeat}
+.g-goods .goods-list .btn-l{ position: absolute; display: block; z-index: 100; width: 12px; height: 15px; left: 15px; top: 31px; background: url(../images/btn_scroll_l.png) left top no-repeat}
+.g-goods .goods-list .btn-r{ position: absolute; display: block; z-index: 100; width: 12px; height: 15px; right: 15px; top: 31px; background: url(../images/btn_scroll_r.png) left top no-repeat}
+.g-goods .goods-big {position: absolute; z-index: 1; top: 42px; left: 0px; width: 508px; height: 228px; display: block; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); -moz-opacity:0; opacity: 0; background: url(../images/bg_img_big_empty.png) left top no-repeat}
 .goods-big-inner {width: 330px; height: 145px; margin: 28px 0 0 55px; text-align: center; background: #fff}
 .g-goods .goods-big .inner{ position: absolute; z-index: 50; top: 0; left: 0; width: 508px; height: 228px; background: url(../images/bg_img_big_empty.png) center center no-repeat}
 .g-goods .goods-big img{ display: block; width: 330px; height: 145px; margin: 0; background-position: center center; background-repeat: no-repeat; background-color: white}
@@ -312,7 +312,7 @@ a.sub-cat, a.sub-cat:hover{ text-decoration: none}
 .g-footer ul li{ float: left; margin: 0 32px 0 0}
 .g-footer ul li a{ color: #fff; text-decoration: none}
 .g-footer ul li a:hover{ color: #E11D39}
-#news-full{ position: absolute; z-index: 600; width: 572px; height: 2000px; bottom: -2000px; right: 109px; background: url(../images/bg_news_full_transp.png) left top no-repeat; padding-left: 30px; padding-top: 0px}
+#news-full{ position: absolute; z-index: 600; width: 572px; height: 2000px; bottom: -2000px; background: url(../images/bg_news_full_transp.png) left top no-repeat; padding-left: 30px; padding-top: 0px}
 .b-actions-full {background: url(../images/bg_actions_full_transp.png) left top no-repeat !important}
 #news-full h3  { float: right; margin-right: 9px; margin-top: 6px; margin-bottom: 56px; text-transform: uppercase; font-size: 14px; font-style: italic; color: #fff;}
 #news-full a#news-cont-title { float: right; margin-right: 9px; margin-top: 6px; margin-bottom: 56px; text-transform: uppercase; font-size: 14px; font-style: italic; color: #fff; text-decoration: none; font-weight: bold;}
@@ -342,7 +342,7 @@ a.sub-cat, a.sub-cat:hover{ text-decoration: none}
 .b-video #video-slider li img{ width: 123px; height: 70px; background-position: center center; background-repeat: no-repeat}
 .b-video #video-slider ul.l2 li img{ filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100); -moz-opacity:1; opacity: 1; background: url(../images/btn_play.png) center center no-repeat}
 /*, .b-video #video-slider .list ul.active img*/ .b-video #video-slider ul.l2 li:hover img{ filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100); -moz-opacity:1; opacity: 1; background: url(../images/btn_play_act.png) center center no-repeat}
-.b-video #video-slider .mask{ position: absolute; z-index: 6; width: 535px; height: 121px; right: 0px; bottom: 0px; background: url(../../images/bg_multimedia_mask.png) bottom center no-repeat}
+.b-video #video-slider .mask{ position: absolute; z-index: 6; width: 535px; height: 121px; right: 0px; bottom: 0px; background: url(../images/bg_multimedia_mask.png) bottom center no-repeat}
 .b-video .b-check-original{ margin: 7px 64px 0 0; height: 29px}
 .b-video .pager{ left: 31px; position: absolute; bottom: 47px; z-index: 500}
 .b-video #video-descr{ display: none; padding: 14px; margin-right: 6px; float: right; width: 472px; background: #231f20; font-family: Arial; font-size: 12px}
@@ -359,7 +359,7 @@ a.sub-cat, a.sub-cat:hover{ text-decoration: none}
 .b-gallery #gallery-slider li img{ width: 123px; height: 70px; background-position: center center; background-repeat: no-repeat}
 .b-gallery #gallery-slider ul.l2 li img{ filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100); -moz-opacity:1; opacity: 1}
 /*, .b-gallery #gallery-slider .list ul.active img*/ .b-gallery #gallery-slider ul.l2 li:hover img{ filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100); -moz-opacity:1; opacity: 1}
-.b-gallery #gallery-slider .mask{ position: absolute; z-index: 6; width: 535px; height: 121px; right: 0px; bottom: 0px; background: url(../../images/bg_multimedia_mask.png) bottom center no-repeat}
+.b-gallery #gallery-slider .mask{ position: absolute; z-index: 6; width: 535px; height: 121px; right: 0px; bottom: 0px; background: url(../images/bg_multimedia_mask.png) bottom center no-repeat}
 .b-gallery .b-check-original{ margin: 7px 64px 0 0; height: 29px}
 .b-gallery .pager{ left: 31px; position: absolute; bottom: 47px; z-index: 500}
 .b-gallery #gallery-descr{ display: none; padding: 14px; margin-right: 6px; float: right; width: 472px; background: #231f20; font-family: Arial; font-size: 12px}
@@ -394,7 +394,7 @@ a.sub-cat, a.sub-cat:hover{ text-decoration: none}
 .b-multimedia #mmedia-slider li img{ width: 123px; height: 70px; background-position: center center; background-repeat: no-repeat}
 .b-multimedia #mmedia-slider ul.l2 li img{ filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100); -moz-opacity:1; opacity: 1; background: url(../images/btn_play.png) center center no-repeat}
 /*, .b-multimedia #mmedia-slider .list ul.active img*/ .b-multimedia #mmedia-slider ul.l2 li:hover img{ filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100); -moz-opacity:1; opacity: 1; background: url(../images/btn_play_act.png) center center no-repeat}
-.b-multimedia #mmedia-slider .mask{ position: absolute; z-index: 6; width: 535px; height: 121px; right: 14px; bottom: 0px; background: url(../../images/bg_multimedia_mask.png) bottom center no-repeat}
+.b-multimedia #mmedia-slider .mask{ position: absolute; z-index: 6; width: 535px; height: 121px; right: 14px; bottom: 0px; background: url(../images/bg_multimedia_mask.png) bottom center no-repeat}
 .b-multimedia .pager{ left: 31px; position: absolute; bottom: 10px; z-index: 500}
 .b-multimedia #video-descr{ display: none; padding: 14px; margin-right: 6px; float: right; width: 472px; background: #231f20; font-family: Arial; font-size: 12px}
 .b-multimedia #video-descr .video-inner p{ padding-top: 10px; line-height: 130%}
